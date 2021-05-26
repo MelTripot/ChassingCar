@@ -8,8 +8,9 @@ public class Menu : MonoBehaviour
   
   public void PlayGame()
     {
-        // Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+      // Time.timeScale = 1f;
+      SceneManager.LoadScene(0);
+      Debug.Log("Lancement de la partie");
     }
 
 }

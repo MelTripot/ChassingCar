@@ -9,6 +9,8 @@ public class VoitureMouvements : MonoBehaviour
     public KeyCode down;
     public KeyCode up;
     public float speedMovement = 10;
+    public float speedMax = 10;
+    public float speedRalenti = 5;
     private Rigidbody2D rb;
 
 
@@ -36,9 +38,17 @@ public class VoitureMouvements : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, speedMovement / 2);
         }
 
-        // Ceci est un test
-        
     }
 
+    public void Ralentissement()
+    {
+        speedMovement = speedRalenti;
+        StartCoroutine(AccelDelay());
+    }
 
+    IEnumerator AccelDelay()
+    {
+        yield return new WaitForSeconds(5F);
+        speedMovement = speedMax;
+    }
 }
