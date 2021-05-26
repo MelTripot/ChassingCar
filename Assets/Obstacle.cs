@@ -11,8 +11,9 @@ public class Obstacle : MonoBehaviour
         if (collided.name == "VoitureJoueur")
         {
             Debug.Log("Ralentissement");
-            // VoitureJoueur voiture = collided.GetComponent<VoitureJoueur>();
-            // voiture.Ralentissement();
+            VoitureMouvements voiture = collided.GetComponent<VoitureMouvements>();
+            voiture.Ralentissement();
+
         }
 
     }
