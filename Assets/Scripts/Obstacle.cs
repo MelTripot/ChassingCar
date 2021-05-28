@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         // Appelle le ralentissement de la voiture
         if (collided.name == "VoitureJoueur")
         {
-            Debug.Log("Ralentissement");
+            // Debug.Log("Ralentissement");
             VoitureMouvements voiture = collided.GetComponent<VoitureMouvements>();
             voiture.Ralentissement();
 

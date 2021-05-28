@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
   
+  private CreationNiveau CreationNiv;
+
   public void PlayGame()
-    {
-      // Time.timeScale = 1f;
-      SceneManager.LoadScene(0);
-      Debug.Log("Lancement de la partie");
-    }
+  {
+    
+    CreationNiv = new CreationNiveau();
+
+    SceneManager.LoadScene(0);
+    Debug.Log("Lancement de la partie");
+    CreationNiv.Generate();
+
+  }
 
 }

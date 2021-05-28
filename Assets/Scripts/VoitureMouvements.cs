@@ -48,7 +48,7 @@ public class VoitureMouvements : MonoBehaviour
 
     IEnumerator AccelDelay()
     {
-        yield return new WaitForSeconds(5F);
+        yield return new WaitForSeconds(2F);
         speedMovement = speedMax;
     }
 }
