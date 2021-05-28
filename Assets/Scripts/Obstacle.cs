@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
         {
             // Debug.Log("Ralentissement");
             VoitureMouvements voiture = collided.GetComponent<VoitureMouvements>();
-            voiture.Ralentissement();
+            voiture.Ralentissement(); //blabla
 
         }
 
